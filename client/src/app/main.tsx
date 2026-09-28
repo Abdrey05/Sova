@@ -5,10 +5,11 @@ import App from "./App.tsx";
 import { AlertProvider } from "@/features/alert/index.ts";
 import { TaskProvider } from "@/entities/task/index.ts";
 import { Provider } from "react-redux";
+import { store } from "./store/store.ts";
 
 
 createRoot(document.getElementById("root")!).render(
-  <Provider >
+  <Provider store={store} >
     <BrowserRouter>
       <AlertProvider>
         <TaskProvider>

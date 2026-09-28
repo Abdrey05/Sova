@@ -18,7 +18,7 @@ export default function SignInForm() {
 
   const [signInData, setSignInData] = useState(initialValue);
 
-  const inputHandler = (event) => {
+  const inputHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSignInData((current) => ({
       ...current,
       [event.target.name]: event.target.value,

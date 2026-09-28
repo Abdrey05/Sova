@@ -15,7 +15,7 @@ export default function AppRouter() {
       <Route path="/" element={<Layout />}>
         <Route path={CLIENT_ROUTES.HOME} element={<MainPage />} />
         <Route
-          path={CLIENT_ROUTES.COUNTERS}
+          path={CLIENT_ROUTES.COUNTER}
           element={
             <Suspense fallback={<Spinner />}>
               <CounterPage />

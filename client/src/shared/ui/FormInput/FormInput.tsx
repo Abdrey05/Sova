@@ -13,7 +13,7 @@ const FormInput = ({ label, ...otherProps }: FormInputPropsType) => {
       ? "shrink form-input-label"
       : "form-input-label";
 
-  const id = useId;
+  const id = useId();
 
   return (
     <div className="group">
@@ -24,7 +24,7 @@ const FormInput = ({ label, ...otherProps }: FormInputPropsType) => {
         id={id}
       />
       {label && (
-        <label className={inputLabelClassName} htmlFor={id()}>
+        <label className={inputLabelClassName} htmlFor={id}>
           {label}
         </label>
       )}
